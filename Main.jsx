@@ -4,13 +4,7 @@ import ClaudeRecipe from "./components/ClaudeRecipe";
 import { getRecipeFromChefClaude } from "./ai";
 
 export default function Main() {
-  const [ingredients, setIngredients] = React.useState([
-    "chicken",
-    "all the main spices",
-    "corn",
-    "heavy cream",
-    "pasta",
-  ]);
+  const [ingredients, setIngredients] = React.useState([]);
   const [recipe, setRecipe] = React.useState("");
 
   async function getRecipe() {
