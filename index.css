@@ -31,6 +31,11 @@ main {
   padding: 30px 30px 10px;
 }
 
+main > h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .add-ingredient-form {
   display: flex;
   justify-content: center;
@@ -117,4 +122,44 @@ ul.ingredients-list > li {
 .suggested-recipe-container ul li,
 .suggested-recipe-container ol li {
   margin-bottom: 8px;
+}
+
+.button-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between spinner and text */
+  background-color: #ddd; /* Light grey background */
+  color: #333; /* Darker text for better contrast */
+  font-weight: bold;
+  cursor: wait;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #aaa; /* Subtle border for definition */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.button-loading:hover {
+  background-color: #ccc; /* Slightly darker grey on hover */
+}
+
+.button-loading:disabled {
+  background-color: #bbb; /* More muted when disabled */
+  cursor: not-allowed;
+}
+
+.button-loading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(50, 50, 50, 0.4); /* Darker grey spinner */
+  border-radius: 50%;
+  border-top-color: #333; /* Even darker for visibility */
+  animation: spin 0.8s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
