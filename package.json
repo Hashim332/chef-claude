@@ -4,18 +4,27 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "dev-backend": "ts-node-dev --respawn backend/server.ts",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "19",
-    "react-dom": "19",
     "@anthropic-ai/sdk": "0.27.3",
     "@huggingface/inference": "2.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "react": "19",
+    "react-dom": "19",
     "react-markdown": "9.0.1",
     "vite": "latest"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "*"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.13",
+    "@vitejs/plugin-react": "*",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
   }
 }
